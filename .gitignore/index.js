@@ -1533,7 +1533,7 @@ client.on('message', message => {
 
 
 
-client.login(config.token);
+client.login(process.env.TOKEN);
 //<:okman65:431120800947503105>
 
 //.then(msg => {
