@@ -149,7 +149,7 @@ client.on('message', message => {
     console.log(`[BOT] Commande aide pour les modérateurs executée par ${message.member.displayName} !`);
   }
 
-  if (message.content === prefix + "ip") {
+  if (message.content === prefix + "ip2") {
     var ouvert_embed = new Discord.RichEmbed()
       .setColor('#ff0000')
       .setTitle("Information serveur")
@@ -183,11 +183,14 @@ client.on('message', message => {
   }
 
 
-  if (message.content === prefix + "ip2") {
-    var help_embed = new Discord.RichEmbed()
+  if (message.content === prefix + "ip") {
+    var ip_embed = new Discord.RichEmbed()
       .setColor('#ff0000')
-      .addField("Information serveur", "IP : Antalya.mcpe.eu       Port : 12145\n\nÉtat : **Ouvert**")
-    message.channel.send(help_embed);
+      .setTitle("Information serveur")
+      .addField("IP :", IP, "true")
+      .addField("Port :", Port, "true")
+      .setFooter("AntaBot | ?help", "")
+    message.channel.send(ip_embed);
     console.log(`[BOT] Commande IP executée par ${message.member.displayName} !`);
   }
 
