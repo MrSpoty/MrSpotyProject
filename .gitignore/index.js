@@ -83,19 +83,19 @@ client.on('message', message => {
   };
 
   
-  if (message.channel) { 
+ // if (message.channel) { 
 
-    var idslow = 294911123541458955;
-    var slowmode = db.get("slowmode").filter({ serveur: idslow }).find('slowmode').value()
-    var slowmodefinal1 = Object.values(slowmode);    
-    let roleslowmode = message.guild.roles.find(r => r.name === "Slowmode");
+ //   var idslow = 294911123541458955;
+ //   var slowmode = db.get("slowmode").filter({ serveur: idslow }).find('slowmode').value()
+ //   var slowmodefinal1 = Object.values(slowmode);    
+ //   let roleslowmode = message.guild.roles.find(r => r.name === "Slowmode");
     
 
-    (message.member.addRole(roleslowmode.id));
-  setTimeout(function () {
-    message.member.removeRole(roleslowmode.id);
-  },slowmodefinal1[1]);
-  }
+ //   (message.member.addRole(roleslowmode.id));
+ // setTimeout(function () {
+ //   message.member.removeRole(roleslowmode.id);
+ // },slowmodefinal1[1]);
+ // }
 
   if (message.channel == message.guild.channels.find("name", "discussion")) return;
 
